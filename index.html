@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <head>
+        <title>NIM X WIN</title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Cinzel&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="./style/style.css">
+    </head>
+        <div class="structure-grid">
+            <header class="header">
+                
+                <h1>NIM X WIN</h1>
+                <p> Jeux de Nim en ligne</p>
+            
+                <figure>
+                    <img src="./media/maitre-du-temps-neutre-ANIMfondnoir.gif" width="50%">
+                    <figcaption></figcaption>
+                </figure>
+
+            </header>
+
+            <article class="partie_jeu">
+
+                <h2>Prêt pour le duel?</h2>
+            
+                <div class="jeubaton">
+                    <ul id="mikado">
+
+                    </ul>
+                </div>
+            
+                <div class="play">
+                    <p id="coups_adverse">A vous de jouer!</p>
+                    <p>Bâtonnet</p>
+
+                        <div>
+                            <input type="range" id="retrait" name="retrait_de_mikado"
+                            min="1" max="3">
+                            <label for="retrait_de_mikado">Retrait</label>
+                        </div>
+                    <button id="valider" onclick="jouer()">Valider</button>
+
+                    <h3>Rêgle du jeu</h3>
+
+                    <div class="text_baton">
+                    <p>20 bâtonnets en bois sont alignés les uns à côté des autres.<br>
+                    A tour de rôle, retirez-en 1, 2 ou 3, <strong> le but étant de laisser le dernier bâtonnet à son adversaire.</strong><br> 
+                    Il leur faudra donc calculer et ne pas retirer de bâtonnet(s) au hasard!<br>
+                    <strong>Celui qui se retrouve avec le dernier bâtonnet a perdu.</strong></p>
+                    </div>
+
+                </div>
+
+            </article>
+        </div>
+    </body>
+    <script src="./index.js"></script>
+</html>

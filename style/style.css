@@ -1,0 +1,84 @@
+html{
+    background-color: black;
+    color: bisque;
+}
+.structure-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 10% 10% 50% 10% 20%;
+}
+
+.header{
+    grid-column-start: 1;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 500%;
+    /* grid-row-start: 2; */
+    display: flex;
+    justify-content: center;
+}
+
+figure {
+    margin-top: -48px;
+    display: flex;
+    justify-content: center;
+}
+
+header>p {
+    font-family: 'Cinzel', serif; 
+    margin-top: -66px;
+    margin-bottom: 80px;
+    
+}
+
+.partie_jeu {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+h2{ 
+    font-family: 'Cinzel', serif;
+    display: flex;
+    justify-content: center;
+}
+
+h3{
+    font-family: 'Baskervville', serif;
+}
+
+p{
+    font-family: 'Baskervville', serif;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.jeubaton {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    display: block;
+    margin-left: 15%;
+    
+}
+#mikado{
+    display: flex;
+    list-style: none;
+    align-items: flex-start;
+    }
+
+#mikado li{
+    height: 150px;
+    width: 12px;
+    display: block;
+    margin: 15px;
+    background-color: rgb(124, 72, 42);
+    grid-column-start: 2;
+}
+.play{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
