@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <body>
+
     <head>
         <title>NIM X WIN</title>
         <meta charset="utf-8">
@@ -9,18 +10,20 @@
         <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Cinzel&display=swap" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="./style/style.css">
     </head>
-        <div class="structure-grid">
-            <header class="header">
-                
-                <h1>NIM X WIN</h1>
-                <p> Jeux de Nim en ligne</p>
-            
-                <figure>
-                    <img src="./media/maitre-du-temps-neutre-ANIMfondnoir.gif" width="50%">
-                    <figcaption></figcaption>
-                </figure>
 
-            </header>
+    <div class="structure-grid">
+        <header class="header">
+                
+            <h1>NIM X WIN</h1>
+            <p> Jeux de Nim en ligne</p>
+            
+            <figure>
+                <img src="./media/maitre-du-temps-neutre-ANIMfondnoir.gif" id="maitreNeutre" width="50%">
+                <img src="./media/Defaite.gif" id="maitreDefaite" width="70%">
+                <figcaption></figcaption>
+            </figure>
+
+        </header>
 
             <article class="partie_jeu">
 
@@ -37,15 +40,18 @@
                     <p>Bâtonnet</p>
 
                         <div>
-                            <input type="range" id="retrait" name="retrait_de_mikado"
-                            min="1" max="3">
-                            <label for="retrait_de_mikado">Retrait</label>
+                            <input type="radio" id="retrait1" name="retrait_de_mikado" value="1" >
+                            <label for="retrait_de_mikado">1</label>
+                            <input type="radio" id="retrait2" name="retrait_de_mikado" value="2">
+                            <label for="retrait_de_mikado">2</label>
+                            <input type="radio" id="retrait3" name="retrait_de_mikado" value="3">
+                            <label for="retrait_de_mikado">3</label>
                         </div>
-                    <button id="valider" onclick="jouer()">Valider</button>
+                    <button id="valider" onclick="jouer()" disabled>Valider</button>
 
                     <h3>Rêgle du jeu</h3>
 
-                    <div class="text_baton">
+                    <div class="text_baton">     
                     <p>20 bâtonnets en bois sont alignés les uns à côté des autres.<br>
                     A tour de rôle, retirez-en 1, 2 ou 3, <strong> le but étant de laisser le dernier bâtonnet à son adversaire.</strong><br> 
                     Il leur faudra donc calculer et ne pas retirer de bâtonnet(s) au hasard!<br>
