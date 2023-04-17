@@ -8,6 +8,8 @@ html{
     grid-template-rows: 10% 10% 50% 10% 20%;
 }
 
+/* Header */
+
 .header{
     grid-column-start: 1;
 }
@@ -20,18 +22,22 @@ h1 {
     justify-content: center;
 }
 
-figure {
-    margin-top: -48px;
-    display: flex;
-    justify-content: center;
-}
-
 header>p {
     font-family: 'Cinzel', serif; 
     margin-top: -66px;
     margin-bottom: 80px;
     
 }
+
+/* Image */
+
+figure {
+    margin-top: -48px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Colonne jeu */
 
 .partie_jeu {
     grid-column-start: 2;
@@ -54,6 +60,8 @@ p{
     margin-top: -10px;
 }
 
+/* Jeu interactif */
+
 .jeubaton {
     grid-column-start: 2;
     grid-row-start: 3;
@@ -67,18 +75,66 @@ p{
     align-items: flex-start;
     }
 
-#mikado li{
+#mikado li:nth-of-type(2n+1){
     height: 150px;
     width: 12px;
     display: block;
     margin: 15px;
     background-color: rgb(124, 72, 42);
     grid-column-start: 2;
+    /*animation-duration: 2s;*/
+    animation-iteration-count: 1;
+    position: relative;
+    
 }
+
+#mikado li:nth-of-type(2n){
+    height: 150px;
+    width: 12px;
+    display: block;
+    margin: 15px 10px;
+    background-color: rgb(124, 72, 42);
+    grid-column-start: 2;
+    /*animation-duration: 2s;*/
+    animation-iteration-count: 1;
+    position: relative;
+   
+}
+
+/* Animation baton */
+
+@keyframes mikado_start1 {
+    0% {opacity: 0%; top: -100px ;}
+    30% {opacity: 30%; top: -70px; }
+    50% {background-color: rgb(124, 72, 42);box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0)}
+    70% {opacity: 90%; background-color: rgb(255, 255, 255);
+        -webkit-box-shadow: -5px -5px 37px 6px rgba(255, 240, 157, 0.3); 
+        box-shadow: -5px -5px 37px 6px rgba(255, 240, 157, 0.3);}
+    100% {opacity: 100%; top: 0px;background-color: rgb(124, 72, 42); }
+    
+}
+
+@keyframes mikado_start2 {
+    0% {opacity: 0%; top: 100px ;}
+    30% {opacity: 30%; top: 70px; }
+    50% {background-color: rgb(124, 72, 42);box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);}
+    70% {opacity: 90%; background-color: rgb(255, 255, 255);
+        -webkit-box-shadow: -5px -5px 37px 6px rgba(255, 240, 157, 0.3); 
+box-shadow: -5px -5px 37px 6px rgba(255, 240, 157, 0.3);}
+    100% {opacity: 100%; top: 0px; background-color: rgb(124, 72, 42);}
+    
+}
+
+
 .play{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
+
+#maitreDefaite{
+    display: none;
+}
+
 
