@@ -1,6 +1,6 @@
 let mikado =20;
-let img=document.createElement("img");
-img.src="/media/Defaite.gif"
+let maitreNeutre= document.getElementById("maitreNeutre");
+let maitreDefaite= document.getElementById("maitreDefaite");
 
 
 function nouveau_tour()
@@ -46,14 +46,34 @@ function tour_adverse()
 
 function mise_en_place()
 { 
-    tour_adverse();
+    maitreNeutre.style.display="block";
+                
+     maitreDefaite.style.display="none";
+    
     nouveau_tour();
+    let mikado_anim= document.querySelectorAll("#mikado li:nth-of-type(2n)");
+    for(let k=0; k<mikado_anim.length; k++)
+    {
+        mikado_anim[k].style.animation='mikado_start1 1s infinite';
+    }
+    
+    let mikado_anim2= document.querySelectorAll("#mikado li:nth-of-type(2n+1)");
+    for(let j=0; j<mikado_anim2.length; j++)
+    {
+        mikado_anim2[j].style.animation='mikado_start2 1s infinite';
+    }
+    console.log(mikado_anim2);
+    
+    setTimeout( tour_adverse(),2000);
+    
+    
 }
 mise_en_place();
 
 function jouer()
 {
-    let retrait=document.getElementById("retrait").value;
+    
+    let retrait=document.querySelector('input[name="retrait_de_mikado"]:checked').value;
     console.log(retrait);
     
     if(!(retrait>mikado))
@@ -62,14 +82,25 @@ function jouer()
         
         if (mikado<=0)
             {
-                alert("Vous avez perdu!");
                 
-                mikado=21;
-                mise_en_place();
+                maitreNeutre.style.display="none";
+                
+                maitreDefaite.style.display="block";
+                document.getElementById("valider").disabled=true;
+                setTimeout(function()
+                {
+                    alert("Vous avez perdu!");
+                    mikado=21;
+                    mise_en_place();
+                    tour_adverse();
+                    nouveau_tour();
+                },2000);   
             }
-    document.getElementById("valider").disabled=true;
-    tour_adverse();
-    nouveau_tour();
+    else{
+        document.getElementById("valider").disabled=true;
+        tour_adverse();
+        nouveau_tour();
+        }
     
     }
    else
@@ -81,4 +112,5 @@ function jouer()
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
+
 
