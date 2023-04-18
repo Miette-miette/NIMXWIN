@@ -75,31 +75,19 @@ p{
     align-items: flex-start;
     }
 
-#mikado li:nth-of-type(2n+1){
-    height: 150px;
-    width: 12px;
-    display: block;
-    margin: 15px;
-    background-color: rgb(124, 72, 42);
-    grid-column-start: 2;
-    /*animation-duration: 2s;*/
-    animation-iteration-count: 1;
-    position: relative;
-    
-}
-
-#mikado li:nth-of-type(2n){
+ #mikado li{
     height: 150px;
     width: 12px;
     display: block;
     margin: 15px 10px;
-    background-color: rgb(124, 72, 42);
+    background: rgb(199,145,116);
+    background: linear-gradient(90deg, rgba(199,145,116,1) 0%, rgba(171,115,85,1) 3%, rgba(163,105,74,1) 30%, rgba(152,93,60,1) 40%, rgba(85,37,11,1) 100%);
+    border-radius: 6px;
     grid-column-start: 2;
     /*animation-duration: 2s;*/
     animation-iteration-count: 1;
     position: relative;
-   
-}
+ }
 
 /* Animation baton */
 
@@ -137,4 +125,4 @@ box-shadow: -5px -5px 37px 6px rgba(255, 240, 157, 0.3);}
     display: none;
 }
 
-
+/* ANIMATION H1 */
