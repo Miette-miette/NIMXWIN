@@ -60,18 +60,41 @@
                 </div>
             
                 <div class="play">
-                    <p id="coups_adverse">A vous de jouer!</p>
+                    
+                    <p id="coups_adverse"><div id="pointe"></div>A vous de jouer!</p>
                     <p>Bâtonnet</p>
 
-                        <div>
-                            <input type="radio" id="retrait1" name="retrait_de_mikado" value="1" >
-                            <label for="retrait_de_mikado">1</label>
-                            <input type="radio" id="retrait2" name="retrait_de_mikado" value="2">
-                            <label for="retrait_de_mikado">2</label>
-                            <input type="radio" id="retrait3" name="retrait_de_mikado" value="3">
-                            <label for="retrait_de_mikado">3</label>
+                        <div class="choix_baton">
+                            <div>
+                                <input type="radio" id="retrait1" name="retrait_de_mikado" value="1" >
+                                <label for="retrait1" id="r1">
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="radio" id="retrait2" name="retrait_de_mikado" value="2">
+                                <label for="retrait2" id="r2">
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                 </label>
+                            </div>
+                            <div>
+                                <input type="radio" id="retrait3" name="retrait_de_mikado" value="3">
+                                <label for="retrait3" id="r3">
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </label>
+                            </div>
+                            <button id="valider" onclick="jouer()" disabled>Retirer</button>
                         </div>
-                    <button id="valider" onclick="jouer()" disabled>Retirer</button>
+                    
 
                     
 
