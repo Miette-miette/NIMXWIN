@@ -5,7 +5,9 @@ html{
 .structure-grid{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 10% 10% 50% 10% 20%;
+}
+body{
+    overflow: hidden;
 }
 
 /* Header */
@@ -17,7 +19,6 @@ html{
 h1 {
     font-family: 'Cinzel', serif;
     font-size: 500%;
-    /* grid-row-start: 2; */
     display: flex;
     justify-content: center;
 }
@@ -27,6 +28,12 @@ header>p {
     margin-top: -66px;
     margin-bottom: 80px;
     
+}
+
+.text_baton{
+    width: 425px;
+    margin-left: 100px;
+    margin-top: 30px;
 }
 
 /* Image */
@@ -40,14 +47,18 @@ figure {
 /* Colonne jeu */
 
 .partie_jeu {
+    background-image: url('../media/fondbois.jpg');
     grid-column-start: 2;
-    grid-row-start: 2;
+    background-size: cover;
+    height: 964px;
+    margin: -7px;
 }
 
-h2{ 
+h2 {
     font-family: 'Cinzel', serif;
     display: flex;
     justify-content: center;
+    font-size: 35px;
 }
 
 h3{
@@ -56,7 +67,6 @@ h3{
 
 p{
     font-family: 'Baskervville', serif;
-    text-align: center;
     margin-top: -10px;
 }
 
@@ -64,16 +74,20 @@ p{
 
 .jeubaton {
     grid-column-start: 2;
-    grid-row-start: 3;
     display: block;
     margin-left: 15%;
     
 }
-#mikado{
+#mikado {
     display: flex;
     list-style: none;
     align-items: flex-start;
-    }
+    background-color: #080808;
+    width: 750px;
+    margin-top: 15%;
+    border-radius: 5px;
+    padding: 25px;
+}
 
  #mikado li{
     height: 150px;
@@ -93,6 +107,7 @@ p{
 
 @keyframes mikado_start1 {
     0% {opacity: 0%; top: -100px ;}
+    5% {opacity: 0%; top: 100px ;}
     30% {opacity: 30%; top: -70px; }
     50% {background-color: rgb(124, 72, 42);box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0)}
     70% {opacity: 90%; background-color: rgb(255, 255, 255);
@@ -104,6 +119,7 @@ p{
 
 @keyframes mikado_start2 {
     0% {opacity: 0%; top: 100px ;}
+    5% {opacity: 0%; top: 100px ;}
     30% {opacity: 30%; top: 70px; }
     50% {background-color: rgb(124, 72, 42);box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);}
     70% {opacity: 90%; background-color: rgb(255, 255, 255);
@@ -126,3 +142,54 @@ box-shadow: -5px -5px 37px 6px rgba(255, 240, 157, 0.3);}
 }
 
 /* ANIMATION H1 */
+
+
+/* CHOIX NIVEAU */
+
+#level {
+    background-color: #a21c27;
+    z-index: 1;
+    position: absolute;
+    height: 964px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+    right: 0%;
+   
+}
+
+label {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+#level>input{
+    display: none;
+}
+
+
+
+#level>input[type="radio"]+label:hover {
+    text-shadow: 0px 1px 1px #ffffff61, 1px -1px 1px #fff, -1px 1px 1px #fff, 1px 1px 1px #fff;
+}
+
+#level>input[type="radio"]:checked+label{
+    color: black;
+    text-shadow: none;
+    font-weight: bolder;
+    
+}
+
+button {
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: 'Cinzel';
+}
