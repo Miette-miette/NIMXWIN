@@ -24,16 +24,19 @@ h1 {
 }
 
 header>p {
-    font-family: 'Cinzel', serif; 
+    font-family: 'Cinzel', serif;
     margin-top: -66px;
     margin-bottom: 80px;
-    
+    margin-left: 100px;
 }
 
-.text_baton{
-    width: 425px;
-    margin-left: 100px;
-    margin-top: 30px;
+.text_baton {
+    width: 404px;
+    padding: 20px;
+    margin-left: 95px;
+    border-radius: 5px;
+    color: black;
+    background-color: #ffe3c7;
 }
 
 /* Image */
@@ -44,6 +47,23 @@ figure {
     justify-content: center;
 }
 
+#pointe {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 23px solid #ffe3c7;
+    margin-left: 373px;
+}
+
+h3{
+    font-family: 'Baskervville', serif;
+    margin: 0px;
+}
+
+p{
+    font-family: 'Baskervville', serif;
+}
 /* Colonne jeu */
 
 .partie_jeu {
@@ -61,14 +81,7 @@ h2 {
     font-size: 35px;
 }
 
-h3{
-    font-family: 'Baskervville', serif;
-}
 
-p{
-    font-family: 'Baskervville', serif;
-    margin-top: -10px;
-}
 
 /* Jeu interactif */
 
@@ -78,12 +91,15 @@ p{
     margin-left: 15%;
     
 }
+
 #mikado {
     display: flex;
     list-style: none;
     align-items: flex-start;
-    background-color: #080808;
-    width: 750px;
+    background-image: url("../media/tapis3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 739px;
     margin-top: 15%;
     border-radius: 5px;
     padding: 25px;
@@ -151,7 +167,7 @@ box-shadow: -5px -5px 37px 6px rgba(255, 240, 157, 0.3);}
     z-index: 1;
     position: absolute;
     height: 964px;
-    width: 70%;
+    width: 67%;
     display: flex;
     flex-direction: column;
     align-items: center;
