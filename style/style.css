@@ -154,6 +154,7 @@ h2 {
 }
 .choix_baton>div>input[type="radio"]+label:hover{
     background-color: #a21c27;
+    cursor: pointer;
 }
 .choix_baton>div>input[type="radio"]:checked+label{
         background-color: black;
@@ -286,6 +287,7 @@ box-shadow: -5px -5px 37px 6px rgba(255, 240, 157, 0.3);}
 
 #level>input[type="radio"]+label:hover {
     text-shadow: 0px 1px 1px #ffffff61, 1px -1px 1px #fff, -1px 1px 1px #fff, 1px 1px 1px #fff;
+    cursor: pointer;
 }
 
 #level>input[type="radio"]:checked+label{
@@ -304,3 +306,7 @@ button {
     font-size: 20px;
     font-family: 'Cinzel';
 }
+button:hover{
+    cursor: pointer;
+}
+
