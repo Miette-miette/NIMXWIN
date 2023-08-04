@@ -1,6 +1,6 @@
-html{
-    background-color: black;
-    color: bisque;
+html {
+    background-color: #181818;
+    color: #ffeeee;
 }
 .structure-grid{
     display: grid;
@@ -39,8 +39,8 @@ p{
     padding: 20px;
     margin-left: 95px;
     border-radius: 5px;
-    color: black;
-    background-color: #ffe3c7;
+    color: #181818;
+    background-color:#ffeeee ;
 }
 
 /* Image */
@@ -56,7 +56,7 @@ figure {
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 23px solid #ffe3c7;
+    border-bottom: 23px solid #ffeeee;
     margin-left: 373px;
 }
 
@@ -97,7 +97,7 @@ h2 {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    background-color: #ffe3c7;
+    background-color: #ffeeee;
     border-radius: 6px;
     width: 101px;
     justify-content: flex-start;
@@ -153,11 +153,11 @@ h2 {
     padding-left: 9px;
 }
 .choix_baton>div>input[type="radio"]+label:hover{
-    background-color: #a21c27;
+    background-color: #752a30;
     cursor: pointer;
 }
 .choix_baton>div>input[type="radio"]:checked+label{
-        background-color: black;
+        background-color: #181818;
         border-radius: 6px;  
 }
 
@@ -196,6 +196,7 @@ h2 {
     /*animation-duration: 2s;*/
     animation-iteration-count: 1;
     position: relative;
+    filter: drop-shadow( #181818 4px 4px 4px);
  }
 
 /* Animation baton */
@@ -235,7 +236,7 @@ box-shadow: -5px -5px 37px 6px rgba(255, 240, 157, 0.3);}
 .play>#pointe {
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 23px solid #ffe3c7;
+    border-right: 23px solid #ffeeee;
     margin-left: -386px;
     margin-top: -61px;
 }
@@ -245,8 +246,8 @@ box-shadow: -5px -5px 37px 6px rgba(255, 240, 157, 0.3);}
     padding: 20px;
     margin-left: 95px;
     border-radius: 5px;
-    color: black;
-    background-color: #ffe3c7;
+    color: #181818;
+    background-color: #ffeeee;
 }
 
 #maitreDefaite{
@@ -259,7 +260,7 @@ box-shadow: -5px -5px 37px 6px rgba(255, 240, 157, 0.3);}
 /* CHOIX NIVEAU */
 
 #level {
-    background-color: #a21c27;
+    background-color: #752a30;
     z-index: 1;
     position: absolute;
     height: 964px;
@@ -291,16 +292,16 @@ box-shadow: -5px -5px 37px 6px rgba(255, 240, 157, 0.3);}
 }
 
 #level>input[type="radio"]:checked+label{
-    color: black;
+    color: #181818;
     text-shadow: none;
     font-weight: bolder;
     
 }
 
 button {
-    background-color: black;
-    color: white;
-    border-style: solid;
+    background-color: #181818;
+    color: #ffeeee;
+    border-style: none;
     border-radius: 4px;
     padding: 10px 20px;
     font-size: 20px;
@@ -309,4 +310,12 @@ button {
 button:hover{
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
 
